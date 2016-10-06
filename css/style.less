@@ -1,0 +1,106 @@
+body {
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+@main-color: #ddd;
+@detail-color: #8df;
+.centralize {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    margin-top: 60px;
+    height: 10vh;
+}
+
+#container {
+    overflow: hidden;
+}
+
+h1,
+h2 {
+    font-family: 'Moncao', cursive;
+    z-index: 10;
+}
+
+h2 {
+    transform: rotate(15deg);
+    font-size: 30px;
+    color: #ddd;
+    margin-top: 30px;
+    margin-left: -50px;
+}
+
+h1 {
+    white-space: nowrap;
+    font-size: 90px;
+    color: @main-color;
+    transform: perspective( 0px) rotateX( 45deg);
+    will-change: transform;
+    transition-timing-function: cubic-bezier(0.88, 2.85, 0.46, -0.12);
+    transition-duration: .2s;
+    text-shadow: 0px 1px 0 darken(@main-color, 10), 0px 2px 0 darken(@main-color, 10), 0px 3px 0 darken(@main-color, 10), 0px 4px 0 darken(@main-color, 10), 0px 5px 0 darken(@main-color, 10), 0px 6px 0 darken(@main-color, 10), 0px 7px 0 darken(@main-color, 10), 0px 5+1px 0 @detail-color, 0px 5+2px 0 @detail-color, 0px 5+3px 0 @detail-color, 0px 5+4px 0 @detail-color, 0px 5+5px 0 @detail-color, 0px 5+6px 0 @detail-color, 0px 5+7px 0 @detail-color, 2px 5+1px 0 @detail-color, 2px 5+2px 0 @detail-color, 2px 5+3px 0 @detail-color, 2px 5+4px 0 @detail-color, 2px 5+5px 0 @detail-color, 2px 5+6px 0 @detail-color, 2px 5+7px 0 @detail-color, -2px 5+1px 0 @detail-color, -2px 5+2px 0 @detail-color, -2px 5+3px 0 @detail-color, -2px 5+4px 0 @detail-color, -2px 5+5px 0 @detail-color, -2px 5+6px 0 @detail-color, -2px 5+7px 0 @detail-color, 0px 12+1px 0 darken(@detail-color, 10), 0px 12+2px 0 darken(@detail-color, 10), 0px 12+3px 0 darken(@detail-color, 10), 0px 12+4px 0 darken(@detail-color, 10), 0px 12+5px 0 darken(@detail-color, 10), 0px 12+6px 0 darken(@detail-color, 10), 0px 12+7px 0 darken(@detail-color, 10), 4px 10+1px 0 darken(@detail-color, 10), 4px 10+2px 0 darken(@detail-color, 10), 4px 10+3px 0 darken(@detail-color, 10), 4px 10+4px 0 darken(@detail-color, 10), 4px 10+5px 0 darken(@detail-color, 10), 4px 10+6px 0 darken(@detail-color, 10), 4px 10+7px 0 darken(@detail-color, 10), -4px 10+1px 0 darken(@detail-color, 10), -4px 10+2px 0 darken(@detail-color, 10), -4px 10+3px 0 darken(@detail-color, 10), -4px 10+4px 0 darken(@detail-color, 10), -4px 10+5px 0 darken(@detail-color, 10), -4px 10+6px 0 darken(@detail-color, 10), -4px 10+7px 0 darken(@detail-color, 10), 3px 7px 0 darken(@detail-color, 10), 4px 8px 0 darken(@detail-color, 10), -4px 9px 0 darken(@detail-color, 10), 0 14+7px 15px #000;
+}
+
+h1:hover {
+    cursor: default;
+    transition-duration: .5s;
+    transform: perspective( 0px) rotateX( 45deg) translateY(-20px);
+    text-shadow: 0px 1px 0 darken(@main-color, 10), 0px 2px 0 darken(@main-color, 10), 0px 3px 0 darken(@main-color, 10), 0px 4px 0 darken(@main-color, 10), 0px 5px 0 darken(@main-color, 10), 0px 6px 0 darken(@main-color, 10), 0px 7px 0 darken(@main-color, 10), 0px 5+1px 0 @detail-color, 0px 5+2px 0 @detail-color, 0px 5+3px 0 @detail-color, 0px 5+4px 0 @detail-color, 0px 5+5px 0 @detail-color, 0px 5+6px 0 @detail-color, 0px 5+7px 0 @detail-color, 2px 5+1px 0 @detail-color, 2px 5+2px 0 @detail-color, 2px 5+3px 0 @detail-color, 2px 5+4px 0 @detail-color, 2px 5+5px 0 @detail-color, 2px 5+6px 0 @detail-color, 2px 5+7px 0 @detail-color, -2px 5+1px 0 @detail-color, -2px 5+2px 0 @detail-color, -2px 5+3px 0 @detail-color, -2px 5+4px 0 @detail-color, -2px 5+5px 0 @detail-color, -2px 5+6px 0 @detail-color, -2px 5+7px 0 @detail-color, 0px 12+1px 0 darken(@detail-color, 10), 0px 12+2px 0 darken(@detail-color, 10), 0px 12+3px 0 darken(@detail-color, 10), 0px 12+4px 0 darken(@detail-color, 10), 0px 12+5px 0 darken(@detail-color, 10), 0px 12+6px 0 darken(@detail-color, 10), 0px 12+7px 0 darken(@detail-color, 10), 4px 10+1px 0 darken(@detail-color, 10), 4px 10+2px 0 darken(@detail-color, 10), 4px 10+3px 0 darken(@detail-color, 10), 4px 10+4px 0 darken(@detail-color, 10), 4px 10+5px 0 darken(@detail-color, 10), 4px 10+6px 0 darken(@detail-color, 10), 4px 10+7px 0 darken(@detail-color, 10), -4px 10+1px 0 darken(@detail-color, 10), -4px 10+2px 0 darken(@detail-color, 10), -4px 10+3px 0 darken(@detail-color, 10), -4px 10+4px 0 darken(@detail-color, 10), -4px 10+5px 0 darken(@detail-color, 10), -4px 10+6px 0 darken(@detail-color, 10), -4px 10+7px 0 darken(@detail-color, 10), 3px 7px 0 darken(@detail-color, 10), 4px 8px 0 darken(@detail-color, 10), -4px 9px 0 darken(@detail-color, 10), 0 14+20+7px 30px #000;
+}
+
+.inner {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    margin-top: 40px;
+    height: 10vh;
+    z-index: 10;
+    margin-top: 180px;
+}
+
+.inner .button {
+    width: 246px;
+    height: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50px;
+    display: inline-block;
+    margin: 0 auto;
+    line-height: 50px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    text-decoration: none;
+    position: relative;
+    z-index: 10;
+}
+
+.inner .button:before {
+    display: block;
+    content: '';
+    width: 0;
+    height: 100%;
+    background-color: rgba(37, 143, 184, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+    border-radius: 50px;
+}
+
+.inner .button:hover:before {
+    width: 100%;
+}
+
+.inner .button:hover {
+    border-color: #fff;
+    color: #fff !important;
+}

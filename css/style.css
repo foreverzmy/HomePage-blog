@@ -1,0 +1,93 @@
+body {
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+}
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.centralize {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  margin-top: 60px;
+  height: 10vh;
+}
+#container {
+  overflow: hidden;
+}
+h1,
+h2 {
+  font-family: 'Moncao', cursive;
+  z-index: 10;
+}
+h2 {
+  transform: rotate(15deg);
+  font-size: 30px;
+  color: #ddd;
+  margin-top: 30px;
+  margin-left: -50px;
+}
+h1 {
+  white-space: nowrap;
+  font-size: 90px;
+  color: #ddd;
+  transform: perspective(0px) rotateX(45deg);
+  will-change: transform;
+  transition-timing-function: cubic-bezier(0.88, 2.85, 0.46, -0.12);
+  transition-duration: .2s;
+  text-shadow: 0px 1px 0 #c4c4c4, 0px 2px 0 #c4c4c4, 0px 3px 0 #c4c4c4, 0px 4px 0 #c4c4c4, 0px 5px 0 #c4c4c4, 0px 6px 0 #c4c4c4, 0px 7px 0 #c4c4c4, 0px 6px 0 #8df, 0px 7px 0 #8df, 0px 8px 0 #8df, 0px 9px 0 #8df, 0px 10px 0 #8df, 0px 11px 0 #8df, 0px 12px 0 #8df, 2px 6px 0 #8df, 2px 7px 0 #8df, 2px 8px 0 #8df, 2px 9px 0 #8df, 2px 10px 0 #8df, 2px 11px 0 #8df, 2px 12px 0 #8df, -2px 6px 0 #8df, -2px 7px 0 #8df, -2px 8px 0 #8df, -2px 9px 0 #8df, -2px 10px 0 #8df, -2px 11px 0 #8df, -2px 12px 0 #8df, 0px 13px 0 #55ceff, 0px 14px 0 #55ceff, 0px 15px 0 #55ceff, 0px 16px 0 #55ceff, 0px 17px 0 #55ceff, 0px 18px 0 #55ceff, 0px 19px 0 #55ceff, 4px 11px 0 #55ceff, 4px 12px 0 #55ceff, 4px 13px 0 #55ceff, 4px 14px 0 #55ceff, 4px 15px 0 #55ceff, 4px 16px 0 #55ceff, 4px 17px 0 #55ceff, -4px 11px 0 #55ceff, -4px 12px 0 #55ceff, -4px 13px 0 #55ceff, -4px 14px 0 #55ceff, -4px 15px 0 #55ceff, -4px 16px 0 #55ceff, -4px 17px 0 #55ceff, 3px 7px 0 #55ceff, 4px 8px 0 #55ceff, -4px 9px 0 #55ceff, 0 21px 15px #000;
+}
+h1:hover {
+  cursor: default;
+  transition-duration: .5s;
+  transform: perspective(0px) rotateX(45deg) translateY(-20px);
+  text-shadow: 0px 1px 0 #c4c4c4, 0px 2px 0 #c4c4c4, 0px 3px 0 #c4c4c4, 0px 4px 0 #c4c4c4, 0px 5px 0 #c4c4c4, 0px 6px 0 #c4c4c4, 0px 7px 0 #c4c4c4, 0px 6px 0 #8df, 0px 7px 0 #8df, 0px 8px 0 #8df, 0px 9px 0 #8df, 0px 10px 0 #8df, 0px 11px 0 #8df, 0px 12px 0 #8df, 2px 6px 0 #8df, 2px 7px 0 #8df, 2px 8px 0 #8df, 2px 9px 0 #8df, 2px 10px 0 #8df, 2px 11px 0 #8df, 2px 12px 0 #8df, -2px 6px 0 #8df, -2px 7px 0 #8df, -2px 8px 0 #8df, -2px 9px 0 #8df, -2px 10px 0 #8df, -2px 11px 0 #8df, -2px 12px 0 #8df, 0px 13px 0 #55ceff, 0px 14px 0 #55ceff, 0px 15px 0 #55ceff, 0px 16px 0 #55ceff, 0px 17px 0 #55ceff, 0px 18px 0 #55ceff, 0px 19px 0 #55ceff, 4px 11px 0 #55ceff, 4px 12px 0 #55ceff, 4px 13px 0 #55ceff, 4px 14px 0 #55ceff, 4px 15px 0 #55ceff, 4px 16px 0 #55ceff, 4px 17px 0 #55ceff, -4px 11px 0 #55ceff, -4px 12px 0 #55ceff, -4px 13px 0 #55ceff, -4px 14px 0 #55ceff, -4px 15px 0 #55ceff, -4px 16px 0 #55ceff, -4px 17px 0 #55ceff, 3px 7px 0 #55ceff, 4px 8px 0 #55ceff, -4px 9px 0 #55ceff, 0 41px 30px #000;
+}
+.inner {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  margin-top: 40px;
+  height: 10vh;
+  z-index: 10;
+  margin-top: 180px;
+}
+.inner .button {
+  width: 246px;
+  height: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50px;
+  display: inline-block;
+  margin: 0 auto;
+  line-height: 50px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  text-decoration: none;
+  position: relative;
+  z-index: 10;
+}
+.inner .button:before {
+  display: block;
+  content: '';
+  width: 0;
+  height: 100%;
+  background-color: rgba(37, 143, 184, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+  border-radius: 50px;
+}
+.inner .button:hover:before {
+  width: 100%;
+}
+.inner .button:hover {
+  border-color: #fff;
+  color: #fff !important;
+}
+/*# sourceMappingURL=style.css.map */
